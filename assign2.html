@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		:root{
+      --border : 8px;
+      --base : #F2F2F2;
+    }
+    body{
+    	font-family: 'DM Sans';
+    	height: 100svh;
+    	width: 100%;
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    	justify-content: flex-start;
+    	gap: 20px;
+    }
+    img{
+    	height: 100%;
+    	width: 100%;
+    	object-fit: cover;
+    }
+    nav{
+    	position: fixed;
+    	top:0;
+    	display: flex;
+    	align-items: center;
+    	justify-content: flex-start;
+    	padding: calc(2 * var(--border));
+    	background: var(--base);
+    	width: 100%;
+    }
+    nav .logo{
+    	height: 40px;
+    	aspect-ratio: 1/1;
+    	border-radius: calc(2 * var(--border));
+    	margin-right: calc(2 * var(--border));
+    }
+
+    input{
+      height: calc(5 * var(--border));
+      width: calc(50 * var(--border));
+      border : 2px solid var(--base);
+      border-radius: var(--border);
+      padding-left: calc(2 * var(--border));
+      font-family: 'DM Sans';
+      font-size: calc(2 * var(--border));
+    }
+    input[type="radio"],
+    input[type="checkbox"]{
+      height: calc(2 * var(--border));
+      width: calc(2 * var(--border));
+      border-radius: var(--border);
+      margin-right: var(--border);
+    }
+    input[type="submit"]{
+    	background: #fff;
+    	width: 100%;
+    	cursor: pointer;
+    }
+    form{
+    	height: fit-content;
+    	width: 500px;
+      padding: var(--border);
+      border-radius: calc(var(--border) + var(--border));
+      background: var(--base);
+      display: flex;
+      flex-direction: column;
+      gap: var(--border);
+    }
+    label{
+      font-size: calc(2 * var(--border));
+      margin-left: calc(2 * var(--border));
+    }
+    h1{
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: calc(2 * var(--border)) 0px;
+      margin-top: 100px;
+    }
+    h2{
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: calc(2 * var(--border)) 0px;
+    }
+    .gender,
+    .education{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: fit-content;
+      width: 100%;
+    }
+
+    .gender .gender-input,
+    .education .edu-input{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: calc(2 * var(--border));
+      height: calc(2 * var(--border));
+      width: 100%;
+    }
+    .city{
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    select{
+      height: calc(5 * var(--border));
+      width: calc(30 * var(--border));
+      border : 2px solid var(--base);
+      border-radius: var(--border);
+      padding-left: calc(2 * var(--border));
+      font-family: 'DM Sans';
+      font-size: calc(2 * var(--border));
+    }
+    .start-details{
+    	display: flex;
+    	align-items: center;
+    	justify-content: space-between;
+    	gap: var(--border);
+    }
+    .start-details .start{
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    	justify-content: flex-start;
+        gap: 10px;
+    }
+    .start-details .start div{
+        display: flex;
+        width: 200px;
+    }
+    .start-details .bus-img{
+    	height: fit-content;
+    	border-radius: calc(2 * var(--border));
+    	background: #333;
+    	overflow: hidden;
+    }
+    a{
+        height: calc(2 * var(--border));
+        text-decoration: none;
+      border-radius: var(--border);
+        background: #fff;
+        width: 100%;
+        cursor: pointer;
+        padding: calc(2 * var(--border));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+	</style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <h3>Bus Booking System</h3>
+    </nav>
+    <h1>Welcome to Bus Booking System</h1>
+    <form>
+        <h2>Booking Form</h2>
+        <div class="start-details">
+            <div class="start">
+                <label>Select Seat Type</label>
+                <div class="seat"><input type="checkbox" name="">AC</div>
+                <div class="seat"><input type="checkbox" name="">NON AC</div>
+            </div>
+        <div class="bus-img">
+            <img src="https://assets.volvo.com/is/image/VolvoInformationTechnologyAB/BS%20VI%20Bus%20Single%20Axcel_Single%20Bus?wid=1400&fit=constrain">
+        </div>
+        </div>
+        <label for="Gender">Select Payment</label>
+        <div class="gender">
+            <div class="gender-input"><input type="radio" name="gender">UPI</div>
+            <div class="gender-input"><input type="radio" name="gender">ATM</div>
+        </div>
+        <a href="D:/Website/feb-love/website/assign.html">Book</a>
+    </form>
+</body>
+
+</html>
