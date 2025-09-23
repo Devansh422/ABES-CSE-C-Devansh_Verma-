@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<label>Name</label>
+	<input type="text" id="name">
+	<button onclick="clickR()">Click me</button>
+
+	<p id="display"></p>
+
+	<script>
+
+		function clickR(){
+			let name = document.getElementById("name");
+			let value = name.value;
+			let x = `Welcome to the technical world ${value}`;
+
+			document.getElementById("display").innerHTML = x;
+		}
+
+
+	</script>
+</body>
+</html>
