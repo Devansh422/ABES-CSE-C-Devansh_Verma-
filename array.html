@@ -6,17 +6,25 @@
 	<title></title>
 </head>
 <body>
-<p id="charcter">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p id="charcter"></p>
 
 <script>
 	var car = ["car-1","car-2","car-3"];
 	car[2] = "Sample"
 	document.getElementById("charcter").innerHTML = car;
+
+
+	var car1 = new Array("car-1","car-2","car-3","car-4","car-5");
+	document.getElementById("charcter").innerHTML = car;
+
+
+	const person={
+		fname : "mohan",
+		lname : "verma",
+		age : 5
+	}
+
+	document.getElementById("charcter").innerHTML = person.age;
 </script>
 </body>
 </html>

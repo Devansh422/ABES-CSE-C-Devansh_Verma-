@@ -4,6 +4,16 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+	<style>
+		span{
+			display: block;
+			width: 50px;
+		}
+
+		#result div{
+			display: flex;
+		}
+	</style>
 </head>
 <body>
 	<div class="table-calculator">
@@ -14,6 +24,7 @@
 
 	<div class="result">
 		<div id="result"></div>
+		<div id="even-numbers"></div>
 	</div>
 
 
@@ -30,18 +41,28 @@ function calculate(){
 	for(i = 1; i <= 10; i++){
 		var r1 = n1 * i;
 		var r2 = n2 * i;
+		let newDiv = document.createElement("div");
+		newDiv.innerHTML = `<div><span>${r1}</span><span>${r2}</span></div>`;
+		document.getElementById("result").appendChild(newDiv);
 
-		var flag = 0;
-
-		if(r1%2 == 0 || r2%2 == 0){
-			document.write(`<div><span>${r1}</span><span>${r2}</span></div>`);
+		if(r1%2 == 0){
+			let newDiv = document.createElement("div");
+			newDiv.id = "even";
+			newDiv.innerHTML = `<div><span>${r1}</span></div>`;
+			document.getElementById("even-numbers").appendChild(newDiv);
+		}
+		else if(r2%2 == 0){
+			let newDiv = document.createElement("div");
+			newDiv.id = "even";
+			newDiv.innerHTML = `<div><span>${r2}</span></div>`;
+			document.getElementById("even-numbers").appendChild(newDiv);
 		}
 		else{
-			document.write(`<div><span>${r1}</span><span>${r2}</span></div>`);
+			let newDiv = document.createElement("div");
+			newDiv.id = "odd";
+			newDiv.innerHTML = `<div><span>${r1}</span><span>${r2}</span></div>`;
+			document.getElementById("even-numbers").appendChild(newDiv);
 		}
-
-
-		// document.write(`<br><div><span>${r1}</span><span>${r2}</span></div>`);
 	}
 }
 
